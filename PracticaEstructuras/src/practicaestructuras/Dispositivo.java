@@ -12,8 +12,8 @@ public class Dispositivo {
     protected int NumSerie;
     protected int calidadPuntuacion;
     
-    public Dispositivo(int pNumSerie, int pcalidadPuntuacion){
-        this.NumSerie = pNumSerie;
+    public Dispositivo(int pcalidadPuntuacion){
+        
         this.calidadPuntuacion = pcalidadPuntuacion;
     }
 

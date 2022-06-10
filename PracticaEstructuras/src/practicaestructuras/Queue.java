@@ -38,4 +38,13 @@ public class Queue<T> {
             return temp.getValue();
         }
     }
+    
+    /*public T current(){
+        if(front == null){
+            return null;
+        }else{
+            Node<T> temp = front;
+            return temp.getValue();
+        }
+    }*/
 }
