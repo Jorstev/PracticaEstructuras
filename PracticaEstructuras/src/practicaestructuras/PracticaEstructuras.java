@@ -33,20 +33,20 @@ public class PracticaEstructuras {
         cola.add(dispositivo3);
         
         PracticaEstructuras main = new PracticaEstructuras();
-        main.revisionCalidad(cola);
-        main.revisionCalidad(cola);
-        main.revisionCalidad(cola);
+        main.revisionCalidad(cola, dispositivo1);
+        main.revisionCalidad(cola, dispositivo2);
+        main.revisionCalidad(cola, dispositivo3);
 
     }
 
-    public void revisionCalidad(Queue<Dispositivo> cola) {
+    public void revisionCalidad(Queue<Dispositivo> cola, Dispositivo dispositivoActual) {
         
-
-        int calidad = cola.remove().calidadPuntuacion;
-        if (calidad < 250) {
+        dispositivoActual = cola.remove();
+        
+        if (dispositivoActual.calidadPuntuacion < 250) {
             System.out.println("Dispositivo desechado");
-        } else if (calidad < 500) {
-            cola.add(new Dispositivo(calidad));
+        } else if (dispositivoActual.calidadPuntuacion < 500) {
+            cola.add(dispositivoActual);
         } else {
             System.out.println("Producto enviado al cliente");
         }
